@@ -31,24 +31,27 @@ categories = ["science::geo"]
 
 [workspace.dependencies]
 approx = "0.5.1"
-arrow-arith = "56"
-arrow-array = "56"
-arrow-buffer = "56"
-arrow-cast = "56"
-arrow-csv = "56"
-arrow-data = "56"
-arrow-ipc = "56"
-arrow-json = "56"
-arrow-ord = "56"
-arrow-schema = "56"
+arrow-arith = { version="=55" }
+arrow-array = { version="=55" }
+arrow-buffer = { version="=55" }
+arrow-cast = { version="=55" }
+arrow-csv = { version="=55" }
+arrow-data = { version="=55" }
+arrow-ipc = { version="=55" }
+arrow-json = { version="=55" }
+arrow-ord = { version="=55" }
+arrow-schema = { version="=55" }
 async-stream = "0.3"
 async-trait = "0.1"
 bytes = "1.10.0"
 chrono = { version = "0.4.41", default-features = false }
+datafusion = { version = "49.0.2" }
+datafusion-datasource = { version = "49.0.2" }
+datafusion-datasource-parquet = { version = "49.0.2" }
+
+pyo3-arrow = { version = "=0.10.0" }
 # Arrow 56
-datafusion = { git = "https://github.com/apache/datafusion", rev = "fa1f8c192dd531d3f2fca61885eafa3e9002f0dd" }
-datafusion-datasource = { git = "https://github.com/apache/datafusion", rev = "fa1f8c192dd531d3f2fca61885eafa3e9002f0dd" }
-datafusion-datasource-parquet = { git = "https://github.com/apache/datafusion", rev = "fa1f8c192dd531d3f2fca61885eafa3e9002f0dd" }
+
 flatgeobuf = { version = "5.0", default-features = false }
 futures = "0.3"
 geo = "0.31.0"
@@ -72,10 +75,9 @@ indexmap = "2.5.0"
 num-traits = "0.2.19"
 numpy = "0.25"
 object_store = "0.12"
-parquet = { version = "56", default-features = false }
+parquet = { version = "55", default-features = false }
 pyo3 = "0.25"
 # https://github.com/kylebarron/arro3/pull/354
-pyo3-arrow = { git = "https://github.com/kylebarron/arro3", rev = "fda03cebe9cfbf8ad292f8070ea21c22b32af1a3" }
 pyo3-geoarrow = { path = "rust/pyo3-geoarrow" }
 rstar = "0.12.2"
 serde = "1"
